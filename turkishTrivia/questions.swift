@@ -9,8 +9,10 @@
 
 import Foundation
 
+
+//Question Model with questions, possible answers & answer index
 struct Questions {
     let questionText: String
-    let questionAnswer: [String]
+    let possibleAnswers: [String]
     let correctAnswerIndex: Int
 }
