@@ -9,20 +9,28 @@ import SwiftUI
 
 //0, 85 156
 //238, 164, 127
-let mainRoyalBlue = Color(red: 0/255, green: 85/255, blue: 156/255)
-let secondaryPeach = Color(red: 238, green: 164/255, blue: 127/255)
 
 struct ContentView: View {
+   
+    let mainColor: Color = Color(red: 20/255, green: 28/255, blue: 58/255)
+    let secondaryPeach = Color(red: 238, green: 164/255, blue: 127/255)
+    
+    let question = Questions(
+        questionText: "How do you say 'Apple' ?",
+        possibleAnswers: ["Elma", "Bir", "Onlar", "Ekmek"],
+        correctAnswerIndex: 0
+    )
+    
     var body: some View {
         ZStack {
-            mainRoyalBlue.ignoresSafeArea()
+            mainColor.ignoresSafeArea()
             VStack {
                 Text("1 / 10")
                     .font(.callout)
                     .multilineTextAlignment(.leading)
                     .padding()
-                
-                Text("How do you say 'Apple'")
+               
+                Text(question.questionText)
                     .font(.largeTitle)
                     .bold()
                     .multilineTextAlignment(.leading)
@@ -32,50 +40,30 @@ struct ContentView: View {
                 HStack {
                     //Choice #1
                     Button(action: {
-                        print("Correct")
+                        print("Tapped Choice 1")
                     }, label: {
-                        Text("Elma")
-                            .font(.body)
-                            .bold()
-                            .multilineTextAlignment(.center)
-                            .padding()
-                            .border(secondaryPeach, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[0])
                     })
                     
                     //Choice #2
                     Button(action: {
-                        print("Incorrect")
+                        print("Tapped Choice 2")
                     }, label: {
-                        Text("Çocuk")
-                            .font(.body)
-                            .bold()
-                            .multilineTextAlignment(.center)
-                            .padding()
-                            .border(secondaryPeach, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[1])
                     })
                     
                     //Choice #3
                     Button(action: {
-                        print("Incorrect")
+                        print("Tapped Choice 3")
                     }, label: {
-                        Text("Adam")
-                            .font(.body)
-                            .bold()
-                            .multilineTextAlignment(.center)
-                            .padding()
-                            .border(secondaryPeach, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[2])
                     })
                     
                     //Choice #4
                     Button(action: {
-                        print("Incorrect")
+                        print("Tapped Choice 4")
                     }, label: {
-                        Text("Yerim")
-                            .font(.body)
-                            .bold()
-                            .multilineTextAlignment(.center)
-                            .padding()
-                            .border(secondaryPeach, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[3])
                     })
                 }
             }
