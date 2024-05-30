@@ -14,6 +14,8 @@
 		27675CCC2B18BE2000B21EFA /* turkishTriviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27675CCB2B18BE2000B21EFA /* turkishTriviaTests.swift */; };
 		27675CD62B18BE2000B21EFA /* turkishTriviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27675CD52B18BE2000B21EFA /* turkishTriviaUITests.swift */; };
 		27675CD82B18BE2000B21EFA /* turkishTriviaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27675CD72B18BE2000B21EFA /* turkishTriviaUITestsLaunchTests.swift */; };
+		27A1FE042BAFB0FC006A6B05 /* questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A1FE032BAFB0FC006A6B05 /* questions.swift */; };
+		27C380222BB9847500137D29 /* ChoiceTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C380212BB9847500137D29 /* ChoiceTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		27675CD12B18BE2000B21EFA /* turkishTriviaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = turkishTriviaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27675CD52B18BE2000B21EFA /* turkishTriviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turkishTriviaUITests.swift; sourceTree = "<group>"; };
 		27675CD72B18BE2000B21EFA /* turkishTriviaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turkishTriviaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		27A1FE032BAFB0FC006A6B05 /* questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questions.swift; sourceTree = "<group>"; };
+		27C380212BB9847500137D29 /* ChoiceTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				27675CBA2B18BE1F00B21EFA /* turkishTriviaApp.swift */,
 				27675CBC2B18BE1F00B21EFA /* ContentView.swift */,
+				27A1FE032BAFB0FC006A6B05 /* questions.swift */,
+				27C380212BB9847500137D29 /* ChoiceTextView.swift */,
 				27675CBE2B18BE1F00B21EFA /* Assets.xcassets */,
 				27675CC02B18BE1F00B21EFA /* Preview Content */,
 			);
@@ -258,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27675CBD2B18BE1F00B21EFA /* ContentView.swift in Sources */,
+				27A1FE042BAFB0FC006A6B05 /* questions.swift in Sources */,
+				27C380222BB9847500137D29 /* ChoiceTextView.swift in Sources */,
 				27675CBB2B18BE1F00B21EFA /* turkishTriviaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
