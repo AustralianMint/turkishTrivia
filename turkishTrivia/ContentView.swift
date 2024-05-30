@@ -38,33 +38,15 @@ struct ContentView: View {
                 Spacer()
                 
                 HStack {
-                    //Choice #1
-                    Button(action: {
-                        print("Tapped Choice 1")
-                    }, label: {
-                        ChoiceTextView(choiceText: question.possibleAnswers[0])
-                    })
-                    
-                    //Choice #2
-                    Button(action: {
-                        print("Tapped Choice 2")
-                    }, label: {
-                        ChoiceTextView(choiceText: question.possibleAnswers[1])
-                    })
-                    
-                    //Choice #3
-                    Button(action: {
-                        print("Tapped Choice 3")
-                    }, label: {
-                        ChoiceTextView(choiceText: question.possibleAnswers[2])
-                    })
-                    
-                    //Choice #4
-                    Button(action: {
-                        print("Tapped Choice 4")
-                    }, label: {
-                        ChoiceTextView(choiceText: question.possibleAnswers[3])
-                    })
+                    //Loop to generate Views based on index of placeholder value
+                    ForEach(0..<question.possibleAnswers.count) { answerIndex in
+                        
+                        Button(action: {
+                            print("Tapped the Answer: '\(question.possibleAnswers[answerIndex])'")
+                        }, label: {
+                            ChoiceTextView(choiceText: question.possibleAnswers[answerIndex])
+                        })
+                    }
                 }
             }
         }
