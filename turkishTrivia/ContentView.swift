@@ -12,7 +12,8 @@ import SwiftUI
 
 struct ContentView: View {
    
-    let mainColor: Color = Color(red: 20/255, green: 28/255, blue: 58/255)
+    //Telling swift that this variable can change, update screen if it does
+    @State var mainColor: Color = Color(red: 20/255, green: 28/255, blue: 58/255)
     let secondaryPeach = Color(red: 238, green: 164/255, blue: 127/255)
     
     let question = Questions(
@@ -43,6 +44,7 @@ struct ContentView: View {
                         
                         Button(action: {
                             print("Tapped the Answer: '\(question.possibleAnswers[answerIndex])'")
+                            mainColor = answerIndex == question.correctAnswerIndex ? .green : .red
                         }, label: {
                             ChoiceTextView(choiceText: question.possibleAnswers[answerIndex])
                         })
